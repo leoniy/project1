@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Notes: HTML Tables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../css/menu.css" media="screen" type="text/css">
+<link rel="stylesheet" href="../css/print.css" media="print" type="text/css">
+<style type="text/css" media="screen">
+body{color:#bcd;background:#113;font:16px/19px Arial, Verdana, sans-serif;margin:15px 5% 15px 5%;padding:0;}
+div#content{position:absolute;top:45px;margin:15px 10% 25px 120px;padding:5px;width:800px;}
+div#titlebar{position:absolute;top:15px;left:15px;background:#335;color:white;font:21px Verdana,sans-serif;text-align:right;border-right:1px solid #cf9;border-bottom:1px solid #cf9;padding:0 4px 0 2px;margin:0;width:96%;}
+p{text-align:left;margin: 0.33em 0.5em 0.5em 0.5em;}
+strong{color:#cde;}
+h1{font-size:1.2em;background:#335;border-right:2px solid #779;border-bottom:2px solid #779;color:#cf9;text-align:right;margin:0 0 10px 0;padding:10px 4px 10px 2px;}
+h2{font:bold 1.1em Verdana, sans-serif;text-align:center;
+;margin:7px 0px 0 0px;padding:0;}
+h3, h5{font:1.15em Verdana, sans-serif;margin: 10px 0 0 0;padding:3px 0 2px 10px;text-align:center;background:#335;color:#fff;}
+h4{font:1.15em Arial, sans-serif;margin:15px 0 0 0;padding:2px 0 1px 0;text-align:left;color:#fff;}
+h5{color:#cf9;font-size:1.25em;}
+h6{font-size: x-small;font-weight:lighter;}
+.yellow_hilite{color:#003;background-color:#FFFF66;}
+img{border-width: 0;}
+div.poem, div.poem2{background-color:#303050;text-align:left;font:14px Verdana, san-serif;padding:10px 10px 10px 60px;width:450px;margin:15px auto;}
+div.poem2{background-color:#303050;border:none;width:670px;padding:10px;}
+.cbi {color: black;}
+div#address, .return {margin:5px 0 5px 0;padding:0;text-align:right;font:11px/13px Arial, sans-serif;}
+.return{font: 12px/15px Arial, sans-serif;text-align:center;}
+#h1sub {font-size:.6em;padding-bottom:2px;}
+a, .ab {text-decoration: none; color: #cf9;}
+div#content a{color:#cf9;}div#content a:hover{color:#cc9;}
+ul{margin:0;}
+.fade, #content a.fade {color:#ccc;}
+.intro{display: block;margin:3px;padding:0 0 18px 10px;text-align:justify;}
+.URL {display: none;}
+.kicker{text-decoration:underline;font-size:0.8em;text-align:left;background:#224;color:#99f;margin:0;padding:2px 0 0 0;}
+p.pb{display:none;}
+.header1 {display:block;margin:0;padding:10px 0.33em 1px 0.33em;font:16px Verdana, sans-serif;text-align:center;color:#fcc;}
+.topic {margin:0;padding: 0px 3px 1px 4px;font-weight:bold;border-bottom: 1px solid #557;border-left:1px solid #557;}
+.session_note {text-align:left;color:#fcc;font:italic 13px Verdana, Arial, sans-serif;}
+#disclaim, .disclaimer{width:74%;background-color:#eeb;border:1px solid #33f;margin:0 auto 15px;padding:5px;font:italic 0.9em Arial;}
+p.disclaimer{text-align:center;margin:20px 100px 0;padding:5px;width:600px;color:#006;}
+p.disclaimer a{color:#006;}
+ul, li {text-align:left;}
+.code{font:1.05em Verdana;}
+</style>
+</head><body>
+<div id="content">
+<a name="pt1" id="pt1"></a>
+<p class="kicker">Web Design and Programming, Section 2</p>
+<h1 class="page">HTML Tables, Table Elements, and Major Attributes</h1>
+<p class="return"><a href="../syllabus.htm#wk1">Syllabus</a> | <a href="table_of_pages.htm">Table of Pages</a> | <a href="../grading.htm">Assignments</a> | <a href="../course_website.htm">References and Useful Links</a></p>
+<h3>Table Elements</h3>
+<p>HTML tables are used for page layout (improperly) and for the arrangement of information that properly belongs in a table, i.e., where there is a consistent relation among fields in a vertial column and records in horizontal rows.</p>
+<p>The primary table elements and attributes (with value units ([ a | b] indicates options are "a" or "b," etc.) are:</p>
+<ul>
+<li><span class="code">&lt;table&gt;</span>&#8212;table element
+	<ul>
+    	<li class="code">width="[pixels or size unit | percent or relative unit]"</li>
+		<li class="code">height="[pixels | percentage]"</li>
+        <li class="code">border="[0 is no border | 1,2,etc., produces 1,2,etc. pixel border]"</li>
+        <li class="code">cellpadding="[pixel]"</li>
+        <li class="code">cellspacing="[pixel]"</li>
+        <li class="code">bgcolor="[background color in hex or name]"</li>
+</ul>
+</li>
+<li>Normal row and column elements
+    <ul>
+        <li><span class="code">&lt;tr&gt;</span>&#8212;table row</li>
+        <li><span class="code">&lt;td&gt;</span>&#8212;table data (=cell)
+   	  <ul>
+            	<li><span class="code">align="[center | justify | left | right]"</span>&#8212;horizontal alignment of cell contents</li>
+             	<li><span class="code">valign="[baseline | bottom | middle | top]"</span>&#8212;vertical alignment<br />(Notice the difference between "center" and "middle" as options for align and valign.)</li>
+        	</ul>
+        </li>
+    </ul>
+</li>
+<li>Header row and column elements
+    <ul>
+        <li><span class="code">&lt;thead&gt;</span>&#8212;table header row</li>
+        <li><span class="code">&lt;th&gt;</span>&#8212;table header data (=cell)</li>
+    </ul>
+</li>
+</ul>
+<p>Here is a representative sample 3-column table with a header row and two rows of data, using all of the above elements, and below is the html used to produce it.  Note:</p>
+<ul style="margin-bottom:25px;">
+<li>Width and bgcolor may also be applied to <span class="code">th</span> and <span class="code">td</span> elements.</li>
+<li>If the width of the table is specified, and all but one of the columns is also specified, the width of the remaining column is known and does not need to be specified.</li>
+<li>If width is not specified, the cells and the table will take on widths as determined by content.</li>
+</ul>
+<div class="poem2">
+<table width="600px" bgcolor="#336600" border="0" cellspacing="10" cellpadding="5">
+  <caption>Table 1: This is the caption for this table.</caption>
+  <thead>
+<th bgcolor="#663300" width="150px" align="left">Name</th>
+    <th bgcolor="#663300">Class Standing</th>
+    <th bgcolor="#663300">G.P.A.</th>
+  </thead>
+<tr>
+    <th bgcolor="#663300" align="right">John</th>
+    <td bgcolor="#996600">Sophomore<br />(transfer from Community College)</td>
+    <td bgcolor="#996600" align="left" valign="top">3.89</td>
+</tr>
+  <tr>
+    <th bgcolor="#663300" width="15%" align="right">Mary</th>
+    <td bgcolor="#996600">Junior<br />(major: Mathematics)</td>
+    <td  bgcolor="#996600">3.67</td>
+  </tr>
+</table>
+&lt;table width="600px" bgcolor="#336600" border="0" cellspacing="10" cellpadding="5"&gt;<br />
+  &lt;caption&gt;Table 1: This is the caption for this table.&lt;/caption&gt;<br />
+  &lt;thead&gt;<br />
+    &lt;th bgcolor="#663300" width="150px" align="left"&gt;Name&lt;/th&gt;<br />
+    &lt;th bgcolor="#663300"&gt;Class Standing&lt;/th&gt;<br />
+    &lt;th bgcolor="#663300"&gt;G.P.A.&lt;/th&gt;<br />
+  &lt;/thead&gt;<br />
+  &lt;tr&gt;<br />
+    &lt;th bgcolor="#663300" align="right"&gt;John&lt;/th&gt;<br />
+    &lt;td bgcolor="#996600"&gt;Sophomore&lt;br /&gt;(transfer from Community College)&lt;/td&gt;<br />
+    &lt;td bgcolor="#996600" align="left" valign="top"&gt;3.89&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+    &lt;th bgcolor="#663300" width="15%" align="right"&gt;Mary&lt;/th&gt;<br />
+    &lt;td bgcolor="#996600"&gt;Junior&lt;br /&gt;(major: Mathematics)&lt;/td&gt;<br />
+    &lt;td bgcolor="#996600"&gt;3.67&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+</div>
+<h3>Nesting Tables</h3>
+<p>Tables may be nested.  That is, within a table data element, you may have another table.  Without presenting the html, here is what that would look like:</p>
+<div class="poem2">
+<table width="600" border="3" bgcolor="#006600" background="../images/plaid.jpg">
+	<tr>
+		<td align="center" valign="middle" width="110px" height="150"><img src="../images/picture_of_me.jpg" /></td>
+		<td><h3 align="center" bgcolor="#006600" style="background-color:transparent;font:bold 24px verdana, san-serif;">Mrs. Leoniy's Resume</h3></td>
+	</tr>
+	<tr>
+		<td align="left" valign="middle" style="padding-left:25px;"><a href="#" style="text-decoration:underline;">Me<br />About Myself<br />My pictures</a></td>
+		<td><table width="400" border="1" background="../images/red_plaid.jpg" cellpadding="5">
+		<caption>(This is a table within a table:)</caption>
+	<tr>
+		<td valign="top"><strong>Education</strong></td>
+		<td><ul><li>College of Smart Intellects</li><li>New Degree Academy</li></ul></td>
+	</tr>
+	<tr>
+		<td valign="top"><strong>Experience</strong></td>
+		<td><ul><li>Professional Instructor</li><li>Computer Genius</li></ul></td>
+	</tr>
+	<tr>
+		<td valign="top"><strong>Skills</strong></td>
+		<td><ul><li>Computer Geek</li><li>Piano Player</li></ul></td>
+	</tr>
+</table>
+</td>
+	</tr>
+</table></div><!--poem2-->
+<p style="margin-top:35px;">Here is the W3C specification for the table element, listing elements that it contains, and also listing attributes: <a href="http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE">http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE</a></p>
+<p style="margin-bottom:35px;">There are more elements and attributes that we can use with tables, but for now, we're almost ready to take on the <a href="../tasks/1_html_index.htm">first
+lab assignment</a>.  First, a word of caution about <a href="1_html_tables_for_layout.htm">tables for layout</a>.</p>
+</div>
+</div><!--content--></body></html>
